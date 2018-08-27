@@ -1,0 +1,33 @@
+{
+	"name": "@~sunsimiao/cj-dnd-backend",
+	"version": "1.0.3",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "tsc",
+		"clean": "rimraf dist",
+		"test": "run-s clean build",
+		"watch": "tsc -w --preserveWatchOutput"
+	},
+	"dependencies": {
+		"@~sunsimiao/cj-dnd-core": "^1.0.3",
+		"autobind-decorator": "^2.1.0",
+		"dnd-core": "^4.0.5",
+		"lodash": "^4.17.10",
+		"shallowequal": "^1.0.2"
+	},
+	"devDependencies": {
+		"@types/node": "10.3.2",
+		"@types/react": "^16.3.16",
+		"@types/shallowequal": "^0.2.2",
+		"npm-run-all": "^4.1.2",
+		"react": "^16.4.0",
+		"react-dnd-test-backend": "^5.0.1",
+		"rimraf": "^2.6.2",
+		"ts-loader": "^4.2.0",
+		"typescript": "^2.9.1",
+		"webpack": "^4.6.0"
+	},
+	"author": "ssm",
+	"license": "ISC"
+}
