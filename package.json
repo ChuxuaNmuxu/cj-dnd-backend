@@ -10,7 +10,6 @@
 		"watch": "tsc -w --preserveWatchOutput"
 	},
 	"dependencies": {
-		"@~sunsimiao/cj-dnd-core": "^1.0.3",
 		"autobind-decorator": "^2.1.0",
 		"dnd-core": "^4.0.5",
 		"lodash": "^4.17.10",

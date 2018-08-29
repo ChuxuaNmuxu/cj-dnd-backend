@@ -393,6 +393,7 @@ export default class HTML5Backend implements Backend {
 			publishSource: false,
 			getSourceClientOffset: this.getSourceClientOffset,
 			clientOffset,
+			meta: {event: e}
 		})
 
 		const { dataTransfer } = e
@@ -534,6 +535,7 @@ export default class HTML5Backend implements Backend {
 			// there. The easy solution is to only fire `hover` in `dragover` on FF.
 			this.actions.hover(dragEnterTargetIds, {
 				clientOffset: getEventClientOffset(e),
+				meta: {event: e}
 			})
 		}
 
@@ -577,6 +579,7 @@ export default class HTML5Backend implements Backend {
 
 		this.actions.hover(dragOverTargetIds || [], {
 			clientOffset: getEventClientOffset(e),
+			meta: {event: e}
 		})
 
 		const canDrop = (dragOverTargetIds || []).some(targetId =>
@@ -640,8 +643,9 @@ export default class HTML5Backend implements Backend {
 
 		this.actions.hover(dropTargetIds, {
 			clientOffset: getEventClientOffset(e),
+			meta: {event: e}
 		})
-		this.actions.drop({ dropEffect: this.getCurrentDropEffect() })
+		this.actions.drop({ dropEffect: this.getCurrentDropEffect(), meta: {event: e} })
 
 		if (this.isDraggingNativeItem()) {
 			this.endDragNativeItem()
